@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>src.test.java.test.usingconfig</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-09-29 10:56:35 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:9]"><span>[1:9]</span> <span>config demo 1</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/test/usingconfig.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">karate demo</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:9]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:9]</span>
+                <span class="scenario-name">config demo 1</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:9]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">10:56:35.881 The value of env is : null 
+10:56:35.898 src/test/java/test/usingconfig.feature:6
+* url baseUrl
+&gt;&gt; src/test/java/test/usingconfig.feature:9
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+src/test/java/test/usingconfig.feature:6
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">10:56:35.898 src/test/java/test/usingconfig.feature:7
+* header Accept = &#39;application/json&#39;
+&gt;&gt; src/test/java/test/usingconfig.feature:9
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+src/test/java/test/usingconfig.feature:6
+src/test/java/test/usingconfig.feature:7
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;/users?page=2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">10:56:35.898 src/test/java/test/usingconfig.feature:10
+Given path &#39;/users?page=2&#39;
+&gt;&gt; src/test/java/test/usingconfig.feature:9
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+src/test/java/test/usingconfig.feature:6
+src/test/java/test/usingconfig.feature:7
+src/test/java/test/usingconfig.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">10:56:35.898 src/test/java/test/usingconfig.feature:11
+When method GET
+&gt;&gt; src/test/java/test/usingconfig.feature:9
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+src/test/java/test/usingconfig.feature:6
+src/test/java/test/usingconfig.feature:7
+src/test/java/test/usingconfig.feature:10
+src/test/java/test/usingconfig.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">10:56:35.898 src/test/java/test/usingconfig.feature:12
+Then status 200
+&gt;&gt; src/test/java/test/usingconfig.feature:9
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn(){
+02: 	
+03: 	var alex={
+04: 		
+05: 		name:&quot;ahmad&quot;,
+06: 		age:26,
+07: 		baseUrl: &#39;https://reqres.in/api&#39;
+08: 	}
+09: 	
+10: 	var env=karate.env
+11: 	karate.log(&#39;The value of env is :&#39;, env)
+12: 	
+13: 	karate.configure(&#39;connectTimeout&#39;,5000)
+14: 	karate.configure(&#39;readTimeout&#39;,5000)
+15: 	
+16: 	return conf
+17: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;conf&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:16)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+src/test/java/test/usingconfig.feature:6
+src/test/java/test/usingconfig.feature:7
+src/test/java/test/usingconfig.feature:10
+src/test/java/test/usingconfig.feature:11
+src/test/java/test/usingconfig.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

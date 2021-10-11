@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"test\/Sectest[1:7]","start":1632929121094,"end":1632929121207,"title":"test\/Sectest[1:7] 10:25:21.094-10:25:21.207 Get domo 1"},{"id":2,"group":1,"content":"test\/Sectest[2:19]","start":1632929121211,"end":1632929121315,"title":"test\/Sectest[2:19] 10:25:21.211-10:25:21.315 Get domo 2"},{"id":3,"group":1,"content":"test\/Sectest[3:27]","start":1632929121319,"end":1632929121475,"title":"test\/Sectest[3:27] 10:25:21.319-10:25:21.475 Get domo 3"},{"id":4,"group":1,"content":"test\/Sectest[4:36]","start":1632929121478,"end":1632929121607,"title":"test\/Sectest[4:36] 10:25:21.478-10:25:21.607 Get domo 4"},{"id":5,"group":1,"content":"test\/usingconfig[1:3]","start":1632929121706,"end":1632929121707,"title":"test\/usingconfig[1:3] 10:25:21.706-10:25:21.707 config demo 1"},{"id":6,"group":1,"content":"test\/Put[1:3]","start":1632929120604,"end":1632929121032,"title":"test\/Put[1:3] 10:25:20.604-10:25:21.032 this is for testing the put http method"},{"id":7,"group":1,"content":"test\/FirstTest[1:3]","start":1632929118097,"end":1632929118198,"title":"test\/FirstTest[1:3] 10:25:18.097-10:25:18.198 Testing a get request"},{"id":8,"group":1,"content":"test\/post[1:8]","start":1632929118265,"end":1632929118771,"title":"test\/post[1:8] 10:25:18.265-10:25:18.771 Post Demo 1"},{"id":9,"group":1,"content":"test\/post[2:17]","start":1632929118775,"end":1632929119096,"title":"test\/post[2:17] 10:25:18.775-10:25:19.096 Post Demo 2"},{"id":10,"group":1,"content":"test\/post[3:25]","start":1632929119105,"end":1632929119510,"title":"test\/post[3:25] 10:25:19.105-10:25:19.510 Post Demo 3"},{"id":11,"group":1,"content":"test\/post[4:34]","start":1632929119518,"end":1632929119886,"title":"test\/post[4:34] 10:25:19.518-10:25:19.886 Post Demo 4"},{"id":12,"group":1,"content":"test\/post[5:44]","start":1632929119892,"end":1632929119939,"title":"test\/post[5:44] 10:25:19.892-10:25:19.939 Post Demo 5","className":"failed"},{"id":13,"group":1,"content":"test\/post[6:58]","start":1632929119956,"end":1632929120407,"title":"test\/post[6:58] 10:25:19.956-10:25:20.407 Post Demo 4","className":"failed"},{"id":14,"group":1,"content":"test\/Delete[1:3]","start":1632929116374,"end":1632929117485,"title":"test\/Delete[1:3] 10:25:16.374-10:25:17.485 delete demo 1"},{"id":15,"group":1,"content":"test\/Delete[2:9]","start":1632929117507,"end":1632929117662,"title":"test\/Delete[2:9] 10:25:17.507-10:25:17.662 get demo 1"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
